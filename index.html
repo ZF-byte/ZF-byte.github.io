@@ -21,7 +21,7 @@
   <!-- <meta http-equiv="refresh" content="2"> -->
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
   <div class="wrapper">
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center bg-black">
@@ -179,9 +179,9 @@
   <script>
     function home() {
       $.ajax({
-        url: "https://zf-byte.github.io/",
+        url: "https://zf-byte.github.io/welcome.html",
         beforeSend: function (f) {
-          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="loadpage.html" ></object>';
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="https://zf-byte.github.io/loadpage.html" ></object>';
         },
         success: function (data) {
           $("#mycontent-field").html(data);
@@ -192,7 +192,7 @@
       $.ajax({
         url: "https://zf-byte.github.io/pages/about.html",
         beforeSend: function (f) {
-          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="loadpage.html" ></object>';
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="https://zf-byte.github.io/loadpage.html" ></object>';
         },
         success: function (data) {
           $("#mycontent-field").html(data);
@@ -203,7 +203,7 @@
       $.ajax({
         url: "https://zf-byte.github.io/pages/gallery.html",
         beforeSend: function (f) {
-          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="loadpage.html" ></object>';
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="https://zf-byte.github.io/loadpage.html" ></object>';
         },
         success: function (data) {
           $("#mycontent-field").html(data);
