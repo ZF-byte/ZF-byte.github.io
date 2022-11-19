@@ -163,12 +163,11 @@
           <script>
             $(document).ready(function () {
               $.ajax({
-                url: "ZF-byte.github.io/pages/project/index.html",
+                url: "https://zf-byte.github.io/pages/project/index.html",
                 beforeSend: function (f) {
                   $("#mycontent-field").html('hai');
                 },
                 success: function (data) {
-                  console.log(data)
                   $("#mycontent-field").html(data);
                 }
               });
