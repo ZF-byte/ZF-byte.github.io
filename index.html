@@ -26,7 +26,6 @@
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center bg-black">
       <img src="dist/img/myLogofDark.png" class="animation_wobble" height="300" width="300">
-      <!-- <img src="dist/img/logoDark.png" class="animation__shake" alt="Zf_logo" height="300" width="300"> -->
     </div>
 
     <!-- Navbar -->
@@ -76,8 +75,8 @@
       <div class="sidebar bg-black">
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
+            <li class="nav-item" onclick="home()">
+              <a href="#" class="nav-link">
                 <i class="fa-solid fa-house-user"></i>
                 <p>
                   Home
@@ -113,37 +112,38 @@
                   </ul>
                 </li>
               </ul>
-            <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" style="color:#0052df;">
+                    <i class="fa-brands fa-python"></i>
+                    <p>
+                      Python
+                      <i class="fas fa-angle-left right"></i>
+                      <span class="badge badge-success right">1</span>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="pages/layout/top-nav.html" class="nav-link">
+                        <i class="fa-brands fa-python"></i>
+                        <p>Top Navigation</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+            </li>
+            <li class="nav-item" onclick="gallery()">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
                   Gallery
                 </p>
               </a>
             </li>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link" style="color:#0052df;">
-                  <i class="fa-brands fa-python"></i>
-                  <p>
-                    Python
-                    <i class="fas fa-angle-left right"></i>
-                    <span class="badge badge-success right">1</span>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
-                      <i class="fa-brands fa-python"></i>
-                      <p>Top Navigation</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            </li>
-            <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
+            <li class="nav-item" onclick="about()">
+              <a href="#" class="nav-link">
                 <i class="fa-regular fa-id-badge"></i>
                 <p>
                   About Me
@@ -164,9 +164,6 @@
             $(document).ready(function () {
               $.ajax({
                 url: "https://zf-byte.github.io/pages/project/index.html",
-                beforeSend: function (f) {
-                  $("#mycontent-field").html('hai');
-                },
                 success: function (data) {
                   $("#mycontent-field").html(data);
                 }
@@ -180,18 +177,37 @@
     </aside>
   </div>
   <script>
-    function allDataWO() {
+    function home() {
       $.ajax({
-        url: "/PvitaKendala/ajaxDataTableKendala",
+        url: "https://zf-byte.github.io/",
         beforeSend: function (f) {
-          $("#mycontent-field").html('hai');
-
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="loadpage.html" ></object>';
         },
-        // success: function (data) {
-        //   $("#loadImage").remove();
-        //   $(".btn-tool").click();
-        //   $("#tabelKendala").dataTable().fnDestroy();
-        // }
+        success: function (data) {
+          $("#mycontent-field").html(data);
+        }
+      });
+    }
+    function about() {
+      $.ajax({
+        url: "https://zf-byte.github.io/pages/about.html",
+        beforeSend: function (f) {
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="loadpage.html" ></object>';
+        },
+        success: function (data) {
+          $("#mycontent-field").html(data);
+        }
+      });
+    }
+    function gallery() {
+      $.ajax({
+        url: "https://zf-byte.github.io/pages/gallery.html",
+        beforeSend: function (f) {
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="loadpage.html" ></object>';
+        },
+        success: function (data) {
+          $("#mycontent-field").html(data);
+        }
       });
     }
   </script>
