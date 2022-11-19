@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zaki Fadlan</title>
   <!-- Google Font: Source Sans Pro -->
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Ionicons -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
@@ -19,7 +23,6 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center bg-black">
       <img src="dist/img/myLogofDark.png" class="animation_wobble" height="300" width="300">
@@ -84,9 +87,8 @@
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fa-solid fa-rectangle-list"></i>
-                <!-- <i class="nav-icon fas fa-copy"></i> -->
                 <p>
-                  My Projects
+                  List Projects
                   <i class="fas fa-angle-left right"></i>
                   <span class="badge badge-success right">1</span>
                 </p>
@@ -111,26 +113,34 @@
                   </ul>
                 </li>
               </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="#" class="nav-link" style="color:#0052df;">
-                    <i class="fa-brands fa-python"></i>
-                    <p>
-                      Python
-                      <i class="fas fa-angle-left right"></i>
-                      <span class="badge badge-success right">1</span>
-                    </p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a href="pages/layout/top-nav.html" class="nav-link">
-                        <i class="fa-brands fa-python"></i>
-                        <p>Top Navigation</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a href="pages/widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Gallery
+                </p>
+              </a>
+            </li>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="color:#0052df;">
+                  <i class="fa-brands fa-python"></i>
+                  <p>
+                    Python
+                    <i class="fas fa-angle-left right"></i>
+                    <span class="badge badge-success right">1</span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/layout/top-nav.html" class="nav-link">
+                      <i class="fa-brands fa-python"></i>
+                      <p>Top Navigation</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
             </li>
             <li class="nav-item">
               <a href="pages/widgets.html" class="nav-link">
@@ -149,14 +159,43 @@
     <div class="content-wrapper bg-dark">
       <!-- Main content -->
       <section class="content">
-        <div class="container-fluid mycontent-field">
-
-        </div><!-- /.container-fluid -->
+        <div class="container-fluid" id="mycontent-field">
+          <script>
+            $(document).ready(function () {
+              $.ajax({
+                url: "ZF-byte.github.io/pages/project/index.html",
+                beforeSend: function (f) {
+                  $("#mycontent-field").html('hai');
+                },
+                success: function (data) {
+                  console.log(data)
+                  $("#mycontent-field").html(data);
+                }
+              });
+            });
+          </script>
+        </div>
       </section>
     </div>
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
   </div>
+  <script>
+    function allDataWO() {
+      $.ajax({
+        url: "/PvitaKendala/ajaxDataTableKendala",
+        beforeSend: function (f) {
+          $("#mycontent-field").html('hai');
+
+        },
+        // success: function (data) {
+        //   $("#loadImage").remove();
+        //   $(".btn-tool").click();
+        //   $("#tabelKendala").dataTable().fnDestroy();
+        // }
+      });
+    }
+  </script>
   <!-- ./wrapper -->
 
   <!-- jQuery -->
