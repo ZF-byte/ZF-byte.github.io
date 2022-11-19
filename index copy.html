@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zaki Fadlan</title>
+  <!-- Google Font: Source Sans Pro -->
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Ionicons -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="icon" id="tabIcon" href="dist/img/LogoGreen.png">
+  <script src="https://kit.fontawesome.com/81698dfd21.js" crossorigin="anonymous"></script>
+  <!-- <meta http-equiv="refresh" content="2"> -->
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
+  <div class="wrapper">
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center bg-black">
+      <img src="dist/img/myLogofDark.png" class="animation_wobble" height="300" width="300">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand bg-black navbar-dark">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fa-brands fa-github fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fa-regular fa-envelope fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fa-brands fa-whatsapp fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fa-brands fa-telegram fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link bg-black">
+        <img src="dist/img/myLogofDark.png" alt="Zf_logo" class="brand-image img-circle elevation-4">
+        <span class="brand-text"><b>Zaki Fadlan</b></span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar bg-black">
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item" onclick="home()">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-house-user"></i>
+                <p>
+                  Home
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-rectangle-list"></i>
+                <p>
+                  List Projects
+                  <i class="fas fa-angle-left right"></i>
+                  <span class="badge badge-success right">1</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" style="color:#df7e00;">
+                    <i class="fa-solid fa-cube"></i>
+                    <p>
+                      Blender 3D
+                      <i class="fas fa-angle-left right"></i>
+                      <span class="badge badge-success right">1</span>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="pages/layout/top-nav.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Top Navigation</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link" style="color:#0052df;">
+                    <i class="fa-brands fa-python"></i>
+                    <p>
+                      Python
+                      <i class="fas fa-angle-left right"></i>
+                      <span class="badge badge-success right">1</span>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="pages/layout/top-nav.html" class="nav-link">
+                        <i class="fa-brands fa-python"></i>
+                        <p>Top Navigation</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+            </li>
+            <li class="nav-item" onclick="gallery()">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Gallery
+                </p>
+              </a>
+            </li>
+            <li class="nav-item" onclick="about()">
+              <a href="#" class="nav-link">
+                <i class="fa-regular fa-id-badge"></i>
+                <p>
+                  About Me
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper bg-dark">
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid" id="mycontent-field">
+          <script>
+            $(document).ready(function () {
+              $.ajax({
+                url: "https://zf-byte.github.io/pages/project/index.html",
+                success: function (data) {
+                  $("#mycontent-field").html(data);
+                }
+              });
+            });
+          </script>
+        </div>
+      </section>
+    </div>
+    <aside class="control-sidebar control-sidebar-dark">
+    </aside>
+  </div>
+  <script>
+    function home() {
+      $.ajax({
+        url: "https://zf-byte.github.io/welcome.html",
+        beforeSend: function (f) {
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="https://zf-byte.github.io/loadpage.html" ></object>';
+        },
+        success: function (data) {
+          $("#mycontent-field").html(data);
+        }
+      });
+    }
+    function about() {
+      $.ajax({
+        url: "https://zf-byte.github.io/pages/about.html",
+        beforeSend: function (f) {
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="https://zf-byte.github.io/loadpage.html" ></object>';
+        },
+        success: function (data) {
+          $("#mycontent-field").html(data);
+        }
+      });
+    }
+    function gallery() {
+      $.ajax({
+        url: "https://zf-byte.github.io/pages/gallery.html",
+        beforeSend: function (f) {
+          document.getElementById("mycontent-field").innerHTML = '<object type="text/html" data="https://zf-byte.github.io/loadpage.html" ></object>';
+        },
+        success: function (data) {
+          $("#mycontent-field").html(data);
+        }
+      });
+    }
+  </script>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+</body>
+
+</html>
